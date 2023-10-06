@@ -17,7 +17,7 @@ export class PasswordStrengthComponent {
     } else {
       const hasLetters = /[a-zA-Z]/.test(this.password);
       const hasDigits = /\d/.test(this.password);
-      const hasSymbols = /[!@#$%^&*,.]/.test(this.password);
+      const hasSymbols = /[!@#$%^&*()\-+.,=_§±]/.test(this.password);
 
       if (hasLetters && hasDigits && hasSymbols) {
         this.passwordStrength = 'Strong';
